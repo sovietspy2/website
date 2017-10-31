@@ -18,6 +18,7 @@ if (isset($_POST['name']) && isset($_SESSION['name'])==false) {
     }
 
     $sql = "SELECT  data FROM user WHERE username = ".$name." AND password = ".$pass.";
+    
     $result = $conn->query($sql);
 
     print $result;
@@ -26,7 +27,7 @@ if (isset($_POST['name']) && isset($_SESSION['name'])==false) {
 }
 
 
-print '<form class="form-inline my-2 my-lg-0" action="login.php" method="post">
+print \'<form class='form-inline my-2 my-lg-0" action="login.php" method="post">
       <input class="form-control mr-sm-2" name="name" type = "text" placeholder = "name" >
       <input class="form-control mr-sm-2" name="password" type = "password" placeholder = "pass" >
       <button class="btn btn-outline-success my-2 my-sm-0" type = "submit" > Enter</button >
