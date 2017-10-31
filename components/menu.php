@@ -29,6 +29,9 @@ print '<nav class="navbar navbar-toggleable-md navbar-light bg-faded">
         <li class="nav-item">
         <a class="nav-link" href="index.php?page=logout">Logout</a>
       </li>
+         <li class="nav-item">
+        <a class="nav-link" href="index.php?page=login">Login</a>
+      </li>
     </ul>';
 if (isset($_SESSION['name'])==false) {
     print '<form class="form-inline my-2 my-lg-0" action="index.php" method="post">
@@ -44,4 +47,5 @@ if( isset( $_GET['page'] ) )
     $page=$_GET['page'];
     include "components/".$page.".php";
 }
+
 ?>
